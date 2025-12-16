@@ -1,0 +1,130 @@
+.border-shadow-bottom {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bg-slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero-slide-image{
+     width: 100%;
+     height: 100%;
+}
+
+
+.about {
+    width: 100%;
+    height: 650px;
+    background-image: url(../img/about.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.about-logo {
+    padding-top: 13vh;
+    padding-left: 6vh;
+}
+
+.about-title {
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
+.about-title-text {
+    text-align: center;
+    width: 30vh;
+}
+
+.about-title-text h2 {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.about-content {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 8vh;
+}
+
+.about-content-text {
+    text-align: justify;
+    font-size: 21px;
+}
+
+.best-product {
+    width: 100%;
+    height: 650px;
+    padding-top: 3vh;
+}
+
+.best-product-text {
+    text-align: center;
+    background-color: aliceblue;
+    height: fit-content;
+}
+
+.best-product-items {
+    margin-top: 6vh;
+}
+
+.item-box {
+    height: 400px;
+    width: 300px;
+    margin: 20px;
+    margin-top: 75px;
+    background-color: blue;
+    position: relative;
+    padding-top: 35%;
+}
+
+.item-image {
+    background-color: red;
+    width: 230px;
+    height: 150px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.item-text {
+    text-align: center;
+    padding: 0;
+}
+
+.item-title {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.separate-line {
+    width: 60%;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.text-harga {
+    font-size: 22px;
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
+
+.box-harga {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 70px;
+}
+
+.text-harga-normal{
+    font-size: 32px;font-weight: 700;
+}
+.text-harga-up{
+    font-size: 76px;font-weight: bold;
+}
