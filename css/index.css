@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "California Vibes";
+    src: url("../fonts/calivornia-vibes/California\ Vibes.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Kg Red Hands";
+    src: url("../fonts/kg-red-hand/KGRedHands.ttf") format("opentype");
+}
+
+
 .border-shadow-bottom {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -26,14 +37,14 @@
 } */
 
 .about {
-    padding-top: 2vw;
+    padding-top: 20px;
     position: relative;
     width: 100%;
     height: 40vw;
     margin-bottom: 20vh;
     background-image: url(../img/about.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 
@@ -55,22 +66,23 @@
 
 .about-title-text {
     text-align: center;
-    width: 30vh;
+    width: 150px;
 }
 
 .about-title-text h2 {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .about-content {
+    text-align: center;
     margin-top: 8vh;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 197px;
+    padding-right: 197px;
 }
 
 .about-content-text {
-    text-align: justify;
-    font-size: 21px;
+    text-align: center;
+    font-size: 23px;
 }
 
 .best-product {
@@ -291,3 +303,26 @@
     vertical-align: middle;
 } */
 
+
+
+@media (max-width:863px) {
+    .about{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        background-size: auto 100%;
+        background-position: top center;
+        /* background-image: none; */
+    }
+    .about-content-text{
+        font-size: small;
+        text-align: justify;
+    }
+    .about-content {
+        margin-top: 10px;
+        text-align: center;
+        margin-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
