@@ -81,7 +81,7 @@
 }
 
 .about-content-text {
-    text-align: center;
+    text-align: left;
     font-size: 23px;
 }
 
@@ -316,7 +316,7 @@
     }
     .about-content-text{
         font-size: small;
-        text-align: justify;
+        text-align: left;
     }
     .about-content {
         margin-top: 10px;
