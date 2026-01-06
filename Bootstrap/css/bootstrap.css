@@ -5903,8 +5903,8 @@ textarea.form-control-lg {
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
   flex: 0 1 auto;
-  width: 25px;
-  height: 25px;
+  width: 1.5vw;
+  height: 1.5vw;
   padding: 0;
   margin-right: 3px;
   margin-left: 3px;
@@ -5931,8 +5931,8 @@ textarea.form-control-lg {
   opacity: 1;
   vertical-align: middle;
   background-color: #3A1F04;
-  width: 33px;
-  height: 33px;
+  width: 2vw;
+  height: 2vw;
 }
 
 .carousel-caption {
