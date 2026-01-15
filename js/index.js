@@ -1,5 +1,6 @@
 const btnFilter = document.querySelectorAll(".sort-text ul li");
 const dataItem = document.querySelectorAll(".product-item-all");
+const bestItem = document.querySelectorAll(".best-item");
 const btnSeeAll = document.getElementById("btnSeeAll");
 
 let activeCategory = "Semua Produk";
@@ -66,38 +67,50 @@ dataItem.forEach((data) => {
         const cardtitle2 = cardContent.querySelector(".item-title-2")
         const cardline = cardContent.querySelector(".separate-line")
         const cardline2 = cardContent.querySelector(".separate-line-2")
-        const cardharga = cardContent.querySelector(".text-harga")
-        const cardharga2 = cardContent.querySelector(".text-harga-2")
-        const descSort2 = cardContent.querySelector(".desc-sort-2")
-        const descCard = cardContent.querySelector(".desc-card")
-        const boxHarga = cardContent.querySelector(".box-harga")
-        const boxHargaNormal = cardContent.querySelectorAll(".text-harga-normal")
-        const boxHargaNormal2 = cardContent.querySelectorAll(".text-harga-normal-2")
-        const boxHargaUp = cardContent.querySelector(".text-harga-up")
-        const boxHargaUp2 = cardContent.querySelector(".text-harga-up-2")
+        const boxHarga = cardContent.querySelector('.harga-box')
+        const boxDesc = cardContent.querySelector('.desc-box')
 
         if(card.classList.contains("item-box-2")){
             card.className = "item-box position-relative text-center pt-5"
             cardtitle2.className = "item-title fw-bold mb-2"
             cardline2.className = "separate-line mx-auto mb-2"
-            cardharga2.className = "text-harga mb-1"
-            boxHargaNormal2.forEach((harga) => {
-                harga.className = "text-harga-normal"
-            })
-            boxHargaUp2.className = "text-harga-up"
-            descCard.style.display = "block"
-            descSort2.style.display = "none"
+            boxDesc.style.display = "block"
+            boxHarga.style.display = "none"
+
         }else{
             card.className = "item-box-2 position-relative text-center pt-5"
             cardtitle.className = "item-title-2 fw-bold mb-2"
             cardline.className = "separate-line-2 mx-auto mb-2"
-            cardharga.className = "text-harga-2 mb-1"
-            boxHargaNormal.forEach((harga) => {
-                harga.className = "text-harga-normal-2"
-            })
-            boxHargaUp.className = "text-harga-up-2"
-            descCard.style.display = "none"
-            descSort2.style.display = "block"
+            boxDesc.style.display = "none"
+            boxHarga.style.display = "block"
+        }
+    }
+})
+
+bestItem.forEach((data) => {
+    data.onclick = () => {
+        const card = data.querySelector("div")
+        const cardContent = card.querySelector(".item-content")
+        const cardtitle = cardContent.querySelector(".item-title")
+        const cardtitle2 = cardContent.querySelector(".item-title-2")
+        const cardline = cardContent.querySelector(".separate-line")
+        const cardline2 = cardContent.querySelector(".separate-line-2")
+        const boxHarga = cardContent.querySelector('.harga-box')
+        const boxDesc = cardContent.querySelector('.desc-box')
+
+        if(card.classList.contains("item-box-2")){
+            card.className = "item-box position-relative text-center pt-5"
+            cardtitle2.className = "item-title fw-bold mb-2"
+            cardline2.className = "separate-line mx-auto mb-2"
+            boxDesc.style.display = "block"
+            boxHarga.style.display = "none"
+
+        }else{
+            card.className = "item-box-2 position-relative text-center pt-5"
+            cardtitle.className = "item-title-2 fw-bold mb-2"
+            cardline.className = "separate-line-2 mx-auto mb-2"
+            boxDesc.style.display = "none"
+            boxHarga.style.display = "block"
         }
     }
 })
