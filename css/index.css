@@ -209,8 +209,9 @@
     margin-top: 25px;
 }
 .desc-sort{
-    font-size: 18px;
+    font-size: 11px;
     font-weight: 100;
+    line-height: 2;
     font-family: 'red-hand';
     color: white;
 }

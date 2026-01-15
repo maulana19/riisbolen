@@ -68,19 +68,16 @@ dataItem.forEach((data) => {
         const cardline2 = cardContent.querySelector(".separate-line-2")
         const cardharga = cardContent.querySelector(".text-harga")
         const cardharga2 = cardContent.querySelector(".text-harga-2")
-        const cardDesc = cardContent.querySelector(".desc-sort")
-        const cardDesc2 = cardContent.querySelector(".desc-sort-2")
+        const descSort2 = cardContent.querySelector(".desc-sort-2")
+        const descCard = cardContent.querySelector(".desc-card")
         const boxHarga = cardContent.querySelector(".box-harga")
         const boxHargaNormal = cardContent.querySelectorAll(".text-harga-normal")
         const boxHargaNormal2 = cardContent.querySelectorAll(".text-harga-normal-2")
         const boxHargaUp = cardContent.querySelector(".text-harga-up")
         const boxHargaUp2 = cardContent.querySelector(".text-harga-up-2")
 
-        // const cardDescText = cardDesc.innerHTML
-        // const cardDescText2 = cardDesc2.innerHTML
         if(card.classList.contains("item-box-2")){
             card.className = "item-box position-relative text-center pt-5"
-            cardDesc2.className = "desc-sort mt-3 px-3"
             cardtitle2.className = "item-title fw-bold mb-2"
             cardline2.className = "separate-line mx-auto mb-2"
             cardharga2.className = "text-harga mb-1"
@@ -88,10 +85,10 @@ dataItem.forEach((data) => {
                 harga.className = "text-harga-normal"
             })
             boxHargaUp2.className = "text-harga-up"
-            cardDesc2.innerHTML = "Ganti Teks Penjelasan"
+            descCard.style.display = "block"
+            descSort2.style.display = "none"
         }else{
             card.className = "item-box-2 position-relative text-center pt-5"
-            cardDesc.className = "desc-sort-2 mt-3 px-3"
             cardtitle.className = "item-title-2 fw-bold mb-2"
             cardline.className = "separate-line-2 mx-auto mb-2"
             cardharga.className = "text-harga-2 mb-1"
@@ -99,7 +96,8 @@ dataItem.forEach((data) => {
                 harga.className = "text-harga-normal-2"
             })
             boxHargaUp.className = "text-harga-up-2"
-            cardDesc.innerHTML = "adonan kulit pastri dengan isian pisang, coklat, keju"
+            descCard.style.display = "none"
+            descSort2.style.display = "block"
         }
     }
 })
