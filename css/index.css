@@ -208,7 +208,7 @@
     margin-left: 13%;
     margin-top: 25px;
 }
-.desc-sort{
+.desc-sort{ 
     font-size: 12px;
     font-weight: 100;
     line-height: 2;
@@ -275,14 +275,14 @@
 .btn-show-menu{
     font-family: 'california-vibes';
     background-color: #7e5303;
-    padding: 7px;
+    padding: 4px;
     font-size: 25px;
     font-weight: bold;
     color: white;
     border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
 }
 
 .our-products{
@@ -350,26 +350,17 @@
     height: auto;
 }
 
-.card .gallery-text{
-    position: absolute;
-    margin-top: 15vw;
-    margin-left: 2vw;
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-}
-
 .btn-show-gallery{
     font-family: 'california-vibes';
     background-color: #7e5303;
-    padding: 7px;
+    padding: 4px;
     font-size: 25px;
     font-weight: bold;
     color: white;
     border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
 }
 
 
