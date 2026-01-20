@@ -345,9 +345,12 @@
 }
 .card img{
     display: block;
-    filter: brightness(50%);
+    filter: brightness(90%);
     width: 100%;
     height: auto;
+}
+.card img:hover {
+    filter: brightness(100%);
 }
 
 .btn-show-gallery{

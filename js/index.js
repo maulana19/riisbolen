@@ -1,15 +1,18 @@
-const btnFilter = document.querySelectorAll(".sort-text ul li");
+const btnFilterProduct = document.querySelectorAll(".sort-text ul li");
 const dataItem = document.querySelectorAll(".product-item-all");
+const images = document.querySelectorAll(".gallery-image");
 const bestItem = document.querySelectorAll(".best-item");
 const btnSeeAll = document.getElementById("btnSeeAll");
+const btnFilterGallery = document.getElementById("btn-show-gallery");
 
 let activeCategory = "Semua Produk";
-let showAll = false;
-const LIMIT = 8;
+let showAllProduct = false;
+let showAllImages = false;
+const LIMITProduct = 8;
+const LIMITImages = 3;
 
 function renderItems() {
     let visibleCount = 0;
-
     dataItem.forEach(item => {
         const category = item.getAttribute("data-category");
 
@@ -18,7 +21,7 @@ function renderItems() {
             category === activeCategory;
 
         if (matchCategory) {
-            if (showAll || visibleCount < LIMIT) {
+            if (showAllProduct || visibleCount < LIMITProduct) {
                 item.style.display = "block";
                 item.className =
                     "product-item-all col-12 col-sm-6 col-md-3 d-flex justify-content-center";
@@ -35,28 +38,48 @@ function renderItems() {
 
     // Tampilkan / sembunyikan tombol See All
     btnSeeAll.style.display =
-        (!showAll && visibleCount >= LIMIT) ? "inline-block" : "none";
+        (!showAllProduct && visibleCount >= LIMITProduct) ? "inline-block" : "none";
+}
+function renderImages() {
+    let visibleCount = 0;
+    images.forEach(item => {
+        if (showAllImages || visibleCount < LIMITImages) {
+            item.style.display = "block";
+            visibleCount++;
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+    // Tampilkan / sembunyikan tombol See All
+    btnFilterGallery.style.display =
+        (!showAllImages && visibleCount >= LIMITImages) ? "inline-block" : "none";
 }
 
+
 // FILTER
-btnFilter.forEach(btn => {
+btnFilterProduct.forEach(btn => {
     btn.onclick = () => {
-        btnFilter.forEach(b =>
+        btnFilterProduct.forEach(b =>
             b.className = "list-group-item item-nonaktif"
         );
 
         btn.className = "list-group-item item-active";
 
         activeCategory = btn.textContent.trim();
-        showAll = false; // reset ke 8 item
+        showAllProduct = false; // reset ke 8 item
         renderItems();
     };
 });
 
 // SEE ALL
 btnSeeAll.onclick = () => {
-    showAll = true;
+    showAllProduct = true;
     renderItems();
+};
+btnFilterGallery.onclick = () => {
+    showAllImages = true;
+    renderImages();
 };
 
 dataItem.forEach((data) => {
@@ -117,3 +140,4 @@ bestItem.forEach((data) => {
 
 // INITIAL LOAD
 renderItems();
+renderImages();
