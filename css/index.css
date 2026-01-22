@@ -311,6 +311,10 @@
     color: black;
 }
 
+.product-item-all{
+    margin-top: 90px;
+}
+
 .item-active{
     font-family: 'california-vibes';
     font-size: 26px;
@@ -537,6 +541,9 @@
     .best-product {
         padding-top: 10px;
         margin-bottom: 10px;
+    }
+    .product-item-all{
+        margin-top: 10px;
     }
     .sort-text{
         margin-top: 10px;
